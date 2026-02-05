@@ -18,6 +18,10 @@ body {
   color: #fff !important;
   font-weight: 500;
 }
+.nav-link:hover {
+  color: #ffd166 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
 .navbar-brand img {
   height: 32px;
   margin-right: 10px;
@@ -49,6 +53,11 @@ a:hover {
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #e0eafc;
+}
+.table-hover tbody tr:hover {
+  background-color: #ffd166 !important;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 .table-bordered {
   border: 2px solid #00b4d8;

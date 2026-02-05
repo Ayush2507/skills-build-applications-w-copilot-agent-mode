@@ -18,26 +18,28 @@ const Users = () => {
   return (
     <div className="container mt-4">
       <h2 className="mb-4">Users</h2>
-      <table className="table table-striped table-bordered">
-        <thead className="table-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user, idx) => (
-            <tr key={user.id || idx}>
-              <th scope="row">{user.id || idx + 1}</th>
-              <td>{user.name || '-'}</td>
-              <td>{user.email || '-'}</td>
-              <td>{user.details || JSON.stringify(user)}</td>
+      <div className="card p-3 mb-4 shadow-sm">
+        <table className="table table-striped table-bordered table-hover">
+          <thead className="table-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Details</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {users.map((user, idx) => (
+              <tr key={user.id || idx}>
+                <th scope="row">{user.id || idx + 1}</th>
+                <td>{user.name || '-'}</td>
+                <td>{user.email || '-'}</td>
+                <td>{user.details || JSON.stringify(user)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

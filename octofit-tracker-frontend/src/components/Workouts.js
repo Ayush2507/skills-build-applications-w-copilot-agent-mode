@@ -18,26 +18,28 @@ const Workouts = () => {
   return (
     <div className="container mt-4">
       <h2 className="mb-4">Workouts</h2>
-      <table className="table table-striped table-bordered">
-        <thead className="table-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Type</th>
-            <th scope="col">Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          {workouts.map((workout, idx) => (
-            <tr key={workout.id || idx}>
-              <th scope="row">{workout.id || idx + 1}</th>
-              <td>{workout.name || '-'}</td>
-              <td>{workout.type || '-'}</td>
-              <td>{workout.details || JSON.stringify(workout)}</td>
+      <div className="card p-3 mb-4 shadow-sm">
+        <table className="table table-striped table-bordered table-hover">
+          <thead className="table-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Type</th>
+              <th scope="col">Details</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {workouts.map((workout, idx) => (
+              <tr key={workout.id || idx}>
+                <th scope="row">{workout.id || idx + 1}</th>
+                <td>{workout.name || '-'}</td>
+                <td>{workout.type || '-'}</td>
+                <td>{workout.details || JSON.stringify(workout)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
