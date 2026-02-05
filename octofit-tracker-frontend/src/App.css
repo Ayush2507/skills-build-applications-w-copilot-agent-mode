@@ -11,21 +11,40 @@ body {
 }
 
 .navbar {
-  background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
-  color: #fff;
+  background: #fafbfc;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 2rem;
 }
-.navbar-brand, .nav-link {
-  color: #fff !important;
+.navbar-brand {
+  color: #222 !important;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-right: 2rem;
+}
+.nav-link {
+  color: #444 !important;
   font-weight: 500;
+  font-size: 1.1rem;
+  margin-right: 1rem;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s;
 }
 .nav-link:hover {
-  color: #ffd166 !important;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  color: #0077b6 !important;
+  text-shadow: none;
 }
 .navbar-brand img {
   height: 32px;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+h2, h1, h3, h4 {
+  color: #222;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 h2, h1, h3, h4 {

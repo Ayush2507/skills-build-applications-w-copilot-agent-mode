@@ -13,18 +13,13 @@ function App() {
     <Router>
       <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
         <div className="container-fluid">
-          <Link className="navbar-brand d-flex align-items-center" to="/">
-            <img src="/octofitapp-small.png" alt="Octofit Logo" style={{height: '32px', marginRight: '10px'}} />
-            Octofit Tracker
-          </Link>
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item"><Link className="nav-link" to="/activities">Activities</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/teams">Teams</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/users">Users</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/workouts">Workouts</Link></li>
-            </ul>
+          <Link className="navbar-brand" to="/">Octofit Tracker</Link>
+          <div className="d-flex align-items-center">
+            <Link className="nav-link px-2" to="/activities">Activities</Link>
+            <Link className="nav-link px-2" to="/leaderboard">Leaderboard</Link>
+            <Link className="nav-link px-2" to="/teams">Teams</Link>
+            <Link className="nav-link px-2" to="/users">Users</Link>
+            <Link className="nav-link px-2" to="/workouts">Workouts</Link>
           </div>
         </div>
       </nav>
